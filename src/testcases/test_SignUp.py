@@ -11,7 +11,7 @@ class TestTwitter(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
-        self.driver.get("https://twitter.com/?lang=en")
+        self.driver.get("https://twitter.com")
 
         self.homepage = HomePage(self.driver)
 
@@ -23,6 +23,9 @@ class TestTwitter(unittest.TestCase):
 
         if self.signuppage.is_user_account_taken():
             assert True
+
+    def test_login_access(self):
+        self.homepage.access_twitter_account()
 
     def tearDown(self):
         self.driver.quit()

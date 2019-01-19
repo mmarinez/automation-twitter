@@ -1,3 +1,3 @@
 user_name = ''
-email = ''
-password = ''
+email = 'marinezbay94@gmail.com'
+password = 'madriguez94'
