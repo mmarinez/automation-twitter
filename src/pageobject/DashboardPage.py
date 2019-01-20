@@ -29,3 +29,10 @@ class DashboardPage(Page):
         self.input_file_upload().send_keys(os.path.abspath(os.path.join('../resources', 'transistor' + '.jpg')))
         time.sleep(2)
         self.button_tweet_button().click()
+
+    def input_type_tweet_link(self):
+        self.input_tweet().send_keys("Test automation link tweet\n")
+        time.sleep(2)
+        self.input_tweet().send_keys("https://dev.to/")
+        self.button_tweet_button().click()
+        time.sleep(2)

@@ -30,6 +30,10 @@ class Twitter(unittest.TestCase):
         self.homepage.access_twitter_account()
         self.dashboardpage.input_type_tweet_text()
 
+    def test_text_link_tweet(self):
+        self.homepage.access_twitter_account()
+        self.dashboardpage.input_type_tweet_link()
+
     def test_image_text_tweet(self):
         self.homepage.access_twitter_account()
         self.dashboardpage.input_image_tweet()
