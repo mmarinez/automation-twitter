@@ -20,6 +20,7 @@ class DashboardPage(Page):
         self.input_tweet().send_keys("Test automation tweet")
         time.sleep(2)
         self.button_tweet_button().click()
+        time.sleep(2)
 
     def input_image_tweet(self):
         time.sleep(2)

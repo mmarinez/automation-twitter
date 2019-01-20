@@ -29,7 +29,6 @@ class Twitter(unittest.TestCase):
     def test_text_tweet(self):
         self.homepage.access_twitter_account()
         self.dashboardpage.input_type_tweet_text()
-        time.sleep(10)
 
     def test_image_text_tweet(self):
         self.homepage.access_twitter_account()
