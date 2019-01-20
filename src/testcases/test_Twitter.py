@@ -8,7 +8,7 @@ from src.pageobject.HomePage import HomePage
 from src.pageobject.SignupPage import SignupPage
 
 
-class TestTwitter(unittest.TestCase):
+class Twitter(unittest.TestCase):
 
     def setUp(self):
         self.driver = webdriver.Firefox()
@@ -30,6 +30,10 @@ class TestTwitter(unittest.TestCase):
         self.homepage.access_twitter_account()
         self.dashboardpage.input_type_tweet_text()
         time.sleep(10)
+
+    def test_image_text_tweet(self):
+        self.homepage.access_twitter_account()
+        self.dashboardpage.input_image_tweet()
 
     def tearDown(self):
         self.driver.quit()
